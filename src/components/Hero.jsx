@@ -3,10 +3,10 @@ import CircuitPeakMark from "./CircuitPeakMark";
 
 export default function Hero() {
   return (
-    <section id="top" className="max-w-6xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28 grid md:grid-cols-2 gap-12 items-center">
+    <section id="top" className="max-w-6xl mx-auto px-6 pt-12 pb-16 md:pt-24 md:pb-28 grid md:grid-cols-2 gap-12 items-center">
       <div>
         <p className="font-mono text-sm text-teal tracking-widest mb-4">ARC 47 SOLUTIONS</p>
-        <h1 className="font-display font-bold text-navy text-5xl sm:text-6xl leading-tight tracking-tight">
+        <h1 className="font-display font-bold text-navy text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight">
           Practical systems for teams that can&apos;t afford downtime.
         </h1>
         <p className="text-slate text-xl mt-6 leading-relaxed">

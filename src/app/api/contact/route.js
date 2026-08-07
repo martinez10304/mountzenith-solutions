@@ -15,7 +15,7 @@ export async function POST(request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   const { error } = await resend.emails.send({
-    from: "MountZenith Solutions <onboarding@resend.dev>",
+    from: "ARC 47 Solutions <onboarding@resend.dev>",
     to: process.env.CONTACT_EMAIL,
     replyTo: email,
     subject: `New project inquiry from ${name}`,

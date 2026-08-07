@@ -43,5 +43,5 @@ export const CLIENT_WORK = [
 export const CAREER = [
   { title: "Software Engineer", org: "Boeing · NASA" },
   { title: "Sr. Business Intelligence Engineer", org: "American Cancer Society · United Way" },
-  { title: "Solutions Architect", org: "MountZenith Solutions" },
+  { title: "Solutions Architect", org: "ARC 47 Solutions" },
 ];

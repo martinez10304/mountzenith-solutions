@@ -21,14 +21,14 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ??
+    process.env.NEXT_PUBLIC_SITE_URL ||
       (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
   ),
-  title: "MountZenith Solutions — Practical systems for teams that can't afford downtime",
+  title: "ARC 47 Solutions — Practical systems for teams that can't afford downtime",
   description:
     "Automation, CRM, and web applications built end to end, from the first sketch to the system your team still trusts a year later.",
   openGraph: {
-    title: "MountZenith Solutions",
+    title: "ARC 47 Solutions",
     description:
       "Automation, CRM, and web applications built end to end, from the first sketch to the system your team still trusts a year later.",
     type: "website",

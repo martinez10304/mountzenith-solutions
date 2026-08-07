@@ -1,11 +1,11 @@
-# MountZenith Solutions — Website Build
+# ARC 47 Solutions — Website Build
 
 ## What this is
 
 A personal consulting/services website for Christopher Martinez, a solo
-software consultant (Zenitharm Solutions was the working name during
-design; the final brand is **MountZenith Solutions**). The site advertises
-his services and shows real, deployed work as proof.
+software consultant (Zenitharm Solutions, then MountZenith Solutions, were
+working names during design; the final brand is **ARC 47 Solutions**). The
+site advertises his services and shows real, deployed work as proof.
 
 ## Reference implementation — read this first
 
@@ -30,11 +30,15 @@ wording, spacing choices, and animation behavior.
 
 ## Brand
 
-- Name: **MountZenith Solutions**
+- Name: **ARC 47 Solutions**
 - Logo: "Circuit Peak" mark — a navy mountain silhouette with a teal
   circuit trace running through it and a gold dot at the apex. Implemented
   as the `CircuitPeakMark` component in the reference file. Extract it as
-  a standalone, reusable component (also usable as a favicon source).
+  a standalone, reusable component (also usable as a favicon source). This
+  mark was originally a visual pun on "MountZenith" (mountain = zenith);
+  after the rename to ARC 47 Solutions that pun no longer applies, but
+  Christopher chose to keep the mark and colors unchanged rather than
+  redesign the logo, so it stays as-is.
 - Colors (exact hex, do not substitute Tailwind defaults):
   - Navy `#14213D` — primary text, dark sections
   - Teal `#2DD4BF` — accent, links, CTAs
@@ -73,7 +77,7 @@ wording, spacing choices, and animation behavior.
 7. **Contact** — form (name, email, message). Currently shows a
    client-side-only confirmation message. **This needs a real backend**
    (see To-Do).
-8. **Footer** — logo mark, "© 2026 MountZenith Solutions · Christopher
+8. **Footer** — logo mark, "© 2026 ARC 47 Solutions · Christopher
    Martinez, CEO," nav links.
 
 ## Hard constraints
@@ -88,18 +92,22 @@ wording, spacing choices, and animation behavior.
 
 ## Known issues / explicit to-dos
 
-1. **Contact form has no backend.** Wire it to a real email service
-   (Formspree, Resend, or a Next.js API route + SMTP/email provider).
-   Keep the existing client-side confirmation UI, just make the submit
-   actually send.
+1. ~~Contact form has no backend.~~ Done — wired to Resend via a Next.js
+   API route (`src/app/api/contact/route.js`). Needs `RESEND_API_KEY` and
+   `CONTACT_EMAIL` env vars to actually send.
 2. **Portfolio mockups are placeholder graphics**, not real screenshots
    (abstract SVG illustrations in brand colors, this was a deliberate
    choice over blurry embedded images — see the `AppMockup` component).
    Swap in real screenshots as Christopher provides them, same component
    structure, just conditionally render an `<img>` when a project has one.
-3. **Favicon** — generate one from the `CircuitPeakMark` component.
-4. Set up basic SEO metadata (title, description, OpenGraph) using the
-   copy already in the Hero section.
+   Each mockup variant now has its own scroll-triggered reveal animation
+   (matching the pattern originally only used by the "game" variant),
+   respecting `prefers-reduced-motion` — preserve this when swapping in
+   real screenshots.
+3. ~~Favicon~~ — done, generated from `CircuitPeakMark` as `src/app/icon.svg`.
+4. ~~SEO metadata~~ — done, title/description/OpenGraph in
+   `src/app/layout.js`, plus a dynamically generated OG image at
+   `src/app/opengraph-image.js`.
 
 ## Deployment
 

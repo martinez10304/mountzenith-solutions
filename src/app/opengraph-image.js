@@ -33,7 +33,7 @@ export default async function Image() {
         </svg>
         <div style={{ display: "flex", flexDirection: "column", maxWidth: 620 }}>
           <div style={{ fontSize: 28, color: "#2DD4BF", letterSpacing: 4, marginBottom: 16 }}>
-            MOUNTZENITH SOLUTIONS
+            ARC 47 SOLUTIONS
           </div>
           <div style={{ fontSize: 52, fontWeight: 700, color: "#14213D", lineHeight: 1.15 }}>
             Practical systems for teams that can&apos;t afford downtime.

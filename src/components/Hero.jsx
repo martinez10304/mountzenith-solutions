@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section id="top" className="max-w-6xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28 grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <p className="font-mono text-xs text-teal tracking-widest mb-4">MOUNTZENITH SOLUTIONS</p>
+        <p className="font-mono text-xs text-teal tracking-widest mb-4">ARC 47 SOLUTIONS</p>
         <h1 className="font-display font-bold text-navy text-4xl sm:text-5xl leading-tight tracking-tight">
           Practical systems for teams that can&apos;t afford downtime.
         </h1>

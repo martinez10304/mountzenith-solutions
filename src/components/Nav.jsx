@@ -13,7 +13,7 @@ export default function Nav() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
           <CircuitPeakMark className="w-7 h-7" />
-          <span className="font-display font-bold text-navy tracking-tight text-lg">MOUNTZENITH</span>
+          <span className="font-display font-bold text-navy tracking-tight text-lg">ARC 47</span>
         </a>
         <nav className="hidden md:flex items-center gap-8 font-mono text-sm text-slate">
           {NAV_LINKS.map((l) => (

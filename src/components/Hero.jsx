@@ -5,11 +5,11 @@ export default function Hero() {
   return (
     <section id="top" className="max-w-6xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28 grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <p className="font-mono text-xs text-teal tracking-widest mb-4">ARC 47 SOLUTIONS</p>
+        <p className="font-mono text-sm text-teal tracking-widest mb-4">ARC 47 SOLUTIONS</p>
         <h1 className="font-display font-bold text-navy text-5xl sm:text-6xl leading-tight tracking-tight">
           Practical systems for teams that can&apos;t afford downtime.
         </h1>
-        <p className="text-slate text-lg mt-6 leading-relaxed">
+        <p className="text-slate text-xl mt-6 leading-relaxed">
           Automation, CRM, and web applications built end to end, from the first sketch to the system your team still trusts a year later.
         </p>
         <div className="flex flex-wrap gap-2 mt-8 font-mono text-xs text-navy">

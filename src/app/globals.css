@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy: #14213d;
+  --color-teal: #2dd4bf;
+  --color-gold: #f2b705;
+  --color-slate: #64748b;
+  --color-ink: #1e293b;
+  --color-offwhite: #f8fafc;
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-ibm-plex-sans);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-offwhite);
+  color: var(--color-ink);
+}
+
+.bg-teal-dark:hover {
+  background-color: #22b8a6;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 260;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.circuit-draw {
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  animation: draw 1.3s ease-out 0.4s forwards;
+}
+
+@keyframes growX {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes growY {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+.trace-line-h {
+  transform-origin: left;
+  animation: growX 1s ease-out forwards;
+}
+.trace-line-v {
+  transform-origin: top;
+  animation: growY 1s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .circuit-draw {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .trace-line-h,
+  .trace-line-v {
+    animation: none;
+    transform: scale(1);
+  }
+}

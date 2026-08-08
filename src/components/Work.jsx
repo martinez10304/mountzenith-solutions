@@ -4,9 +4,13 @@ import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import AppMockup from "./AppMockup";
 import { INDEPENDENT_BUILDS, CLIENT_WORK } from "@/lib/site-data";
+import { useInView, usePrefersReducedMotion } from "@/lib/hooks";
 
 export default function Work() {
   const [buildFilter, setBuildFilter] = useState("All");
+  const [clientWorkRef, clientWorkInView] = useInView({ threshold: 0.2 });
+  const reducedMotion = usePrefersReducedMotion();
+  const clientWorkRevealed = clientWorkInView || reducedMotion;
 
   return (
     <section id="work" className="bg-white border-y border-slate-200 py-20">
@@ -61,9 +65,20 @@ export default function Work() {
         </div>
 
         <h3 className="font-mono text-sm text-navy mb-6 tracking-wide">SYSTEMS &amp; CLIENT WORK</h3>
-        <div className="grid sm:grid-cols-2 gap-6">
-          {CLIENT_WORK.map((p) => (
-            <div key={p.title} className="border border-slate-200 rounded-lg p-6">
+        <div ref={clientWorkRef} className="grid sm:grid-cols-2 gap-6">
+          {CLIENT_WORK.map((p, i) => (
+            <div
+              key={p.title}
+              className="group border border-slate-200 rounded-lg p-6 relative overflow-hidden"
+              style={{
+                opacity: clientWorkRevealed ? 1 : 0,
+                transform: clientWorkRevealed ? "translateY(0)" : "translateY(16px)",
+                transition: reducedMotion
+                  ? "none"
+                  : `opacity 0.5s ease-out ${i * 0.1}s, transform 0.5s ease-out ${i * 0.1}s`,
+              }}
+            >
+              <div className="absolute top-0 left-0 h-0.5 bg-teal w-full scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
               <h4 className="font-display font-bold text-navy text-lg mb-2">{p.title}</h4>
               <p className="text-slate text-sm leading-relaxed mb-3">{p.desc}</p>
               <div className="flex flex-wrap gap-2">

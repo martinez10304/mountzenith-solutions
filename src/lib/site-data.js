@@ -34,10 +34,10 @@ export const INDEPENDENT_BUILDS = [
 ];
 
 export const CLIENT_WORK = [
-  { title: "Nonprofit CRM Reporting", desc: "Built contact, membership, and contribution reports directly against a Dynamics 365 / Dataverse CRM for a national nonprofit network, including multi-year retention comparisons.", tags: ["Dynamics 365", "Dataverse", "SQL"] },
-  { title: "Donor Outreach Automation", desc: "Designed a Power Automate workflow that generates a full outreach task sequence and stamps campaign status automatically, replacing a manual, easy-to-miss process.", tags: ["Power Automate", "CRM Automation"] },
-  { title: "Multi-Affiliate Contribution Reporting", desc: "Standardized SQL Server reporting across several regional nonprofit affiliates, reconciling inconsistent source-of-fund classifications into one reliable report.", tags: ["SQL Server", "Reporting"] },
-  { title: "Giving Platform Front-End Work", desc: "Ongoing front-end development across multiple CMS-based giving platforms: layout fixes, form validation, email templates, and cross-client browser fixes.", tags: ["HTML/CSS/JS", "CMS"] },
+  { title: "Web Applications", desc: "Shipped full applications end to end, not just prototypes: a job-search tracker with live application-funnel analytics and API-driven job matching, and a client scheduling app with board and calendar views, delivered for a behavioral health practice tracking availability and session cadence.", tags: ["Next.js", "Supabase", "API Integration"] },
+  { title: "Website Design & Development", desc: "Designed and built marketing sites from scratch, then kept them working everywhere clients' customers actually see them: a lead-generation site for a Houston general contractor, and ongoing front-end work across five CMS-based giving platforms, including layout fixes, form validation, and cross-client email rendering.", tags: ["HTML/CSS/JS", "CMS", "Cross-Browser Fixes"] },
+  { title: "Automation & Workflows", desc: "Replaced manual, easy-to-miss processes with flows that run themselves: a workflow that reads campaign dates off a CRM record and auto-generates a six-task outreach sequence with correct due dates, and a flow that stamps batch IDs across a production application automatically.", tags: ["Power Automate", "PowerApps", "Process Design"] },
+  { title: "CRM Systems", desc: "Configured, queried, and kept usable Dynamics 365/Dataverse CRMs for nonprofit networks: built contact and multi-year membership retention reports by working around platform limitations the built-in report tools couldn't get past.", tags: ["Dynamics 365", "Dataverse", "SQL4CDS"] },
 ];
 
 export const CAREER = [

@@ -1,24 +1,7 @@
 "use client";
 
-import { useRef, useState, useEffect, useSyncExternalStore } from "react";
-
-function subscribeToReducedMotion(callback) {
-  const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-  mq.addEventListener("change", callback);
-  return () => mq.removeEventListener("change", callback);
-}
-
-function getReducedMotionSnapshot() {
-  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
-
-function getReducedMotionServerSnapshot() {
-  return false;
-}
-
-function usePrefersReducedMotion() {
-  return useSyncExternalStore(subscribeToReducedMotion, getReducedMotionSnapshot, getReducedMotionServerSnapshot);
-}
+import { useRef, useState, useEffect } from "react";
+import { usePrefersReducedMotion } from "@/lib/hooks";
 
 export default function AppMockup({ variant, className = "" }) {
   const ref = useRef(null);
